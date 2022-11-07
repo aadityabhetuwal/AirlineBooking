@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <% include ./imports.ejs %>
+    <title>Booking</title>
+
+    <style>
+      .bg-overlay {
+        background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./images/bg.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        color: #fff;
+        /* width: 100%; */
+        height: 640px;
+      }
+
+      #box>* {
+        color: black !important;
+      }
+
+      #exTab1 .tab-content {
+        color: white;
+        background-color: #428bca;
+        padding: 5px 15px;
+      }
+
+      #exTab2 h3 {
+        color: white;
+        background-color: #428bca;
+        padding: 5px 15px;
+      }
+
+      /* remove border radius for the tab */
+
+      #exTab1 .nav-pills>li>a {
+        border-radius: 0;
+      }
+
+      /* change border radius for the tab , apply corners on top*/
+
+      #exTab3 .nav-pills>li>a {
+        border-radius: 4px 4px 0 0;
+      }
+
+      #exTab3 .tab-content {
+        color: white;
+        background-color: #428bca;
+        padding: 5px 15px;
+      }
+
+      .tab-headers {
+        color: black !important;
+        font-size: 1.1em !important;
+      }
+
+      .active {
+        color: #428bca !important;
+      }
+    </style>
+
+    <script src="./javascripts/index.js" async></script>
+    <script src="./javascripts/passenger.js" async></script>
+
+</head>
+
+<body>
+  <!-- Image and text -->
+  <% include ./nav.ejs %>
+
+    <section class="d-flex align-items-start justify-content-center p-2 pt-5 bg-overlay">
+      <div class="d-flex align-items-center justify-content-center bg-white text-black 
+        rounded p-4 shadow-lg flex-column" id="box">
+        <div class="header p-2">
+          <div class="display-5 text-secondary fw-bold">Flight Booking</div>
+          <span class="text-muted">Please make the payment to start enjoying all the features of our premium plan
+            as soon as possible</span>
+        </div>
+
+        <div id="msg-box" class="m-2 p-2 align-self-start">
+        </div>
+
+        <div class="mt-2 form-group me-auto">
+          <ul class="nav nav-tabs" id="myTab" class="tab-headers" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active tab-headers" id="one-way-tab" data-bs-toggle="tab"
+                data-bs-target="#one-way" type="button" role="tab" aria-controls="one-way" aria-selected="true">One
+                Way</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link tab-headers" id="round-trip-tab" data-bs-toggle="tab" data-bs-target="#round-trip"
+                type="button" role="tab" aria-controls="round-trip" aria-selected="false">Round Trip</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="one-way" role="tabpanel" aria-labelledby="one-way-tab">
+              <% include ./single_way.ejs %>
+            </div>
+            <div class="tab-pane fade" id="round-trip" role="tabpanel" aria-labelledby="round-trip-tab">
+              <% include ./round_trip.ejs %>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group align-self-start p-2">
+          <% include ./adultSelect.ejs %>
+        </div>
+        <div class="form-group align-self-start p-2">
+          <button class="btn btn-primary btn-lg" id="search-btn">Search</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="placeholder">
+      
+    </div>
+</body>
+
+</html>

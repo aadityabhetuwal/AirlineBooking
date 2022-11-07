@@ -1,0 +1,286 @@
+{
+    "type": "flight-offers-pricing",
+    "flightOffers": [
+      {
+        "type": "flight-offer",
+        "id": "1",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "paymentCardRequired": false,
+        "lastTicketingDate": "2022-11-08",
+        "itineraries": [
+          {
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "BLR",
+                  "at": "2022-11-08T02:40:00"
+                },
+                "arrival": {
+                  "iataCode": "NRT",
+                  "terminal": "2",
+                  "at": "2022-11-08T14:10:00"
+                },
+                "carrierCode": "JL",
+                "number": "754",
+                "aircraft": {
+                  "code": "788"
+                },
+                "operating": {
+                  "carrierCode": "JL"
+                },
+                "duration": "PT8H",
+                "id": "39",
+                "numberOfStops": 0,
+                "co2Emissions": [
+                  {
+                    "weight": 387,
+                    "weightUnit": "KG",
+                    "cabin": "ECONOMY"
+                  }
+                ]
+              },
+              {
+                "departure": {
+                  "iataCode": "NRT",
+                  "terminal": "2",
+                  "at": "2022-11-08T17:05:00"
+                },
+                "arrival": {
+                  "iataCode": "LAX",
+                  "terminal": "B",
+                  "at": "2022-11-08T09:50:00"
+                },
+                "carrierCode": "JL",
+                "number": "62",
+                "aircraft": {
+                  "code": "788"
+                },
+                "operating": {
+                  "carrierCode": "JL"
+                },
+                "duration": "PT9H45M",
+                "id": "40",
+                "numberOfStops": 0,
+                "co2Emissions": [
+                  {
+                    "weight": 350,
+                    "weightUnit": "KG",
+                    "cabin": "ECONOMY"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "LAX",
+                  "at": "2022-11-09T23:50:00"
+                },
+                "arrival": {
+                  "iataCode": "HND",
+                  "terminal": "3",
+                  "at": "2022-11-11T05:05:00"
+                },
+                "carrierCode": "JL",
+                "number": "7015",
+                "aircraft": {
+                  "code": "789"
+                },
+                "operating": {
+                  "carrierCode": "AA"
+                },
+                "duration": "PT12H15M",
+                "id": "78",
+                "numberOfStops": 0,
+                "co2Emissions": [
+                  {
+                    "weight": 342,
+                    "weightUnit": "KG",
+                    "cabin": "ECONOMY"
+                  }
+                ]
+              },
+              {
+                "departure": {
+                  "iataCode": "NRT",
+                  "terminal": "2",
+                  "at": "2022-11-11T18:00:00"
+                },
+                "arrival": {
+                  "iataCode": "BLR",
+                  "at": "2022-11-12T00:20:00"
+                },
+                "carrierCode": "JL",
+                "number": "753",
+                "aircraft": {
+                  "code": "788"
+                },
+                "operating": {
+                  "carrierCode": "JL"
+                },
+                "duration": "PT9H50M",
+                "id": "79",
+                "numberOfStops": 0,
+                "co2Emissions": [
+                  {
+                    "weight": 387,
+                    "weightUnit": "KG",
+                    "cabin": "ECONOMY"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "price": {
+          "currency": "EUR",
+          "total": "1541.97",
+          "base": "465.00",
+          "fees": [
+            {
+              "amount": "0.00",
+              "type": "SUPPLIER"
+            },
+            {
+              "amount": "0.00",
+              "type": "TICKETING"
+            },
+            {
+              "amount": "0.00",
+              "type": "FORM_OF_PAYMENT"
+            }
+          ],
+          "grandTotal": "1541.97",
+          "billingCurrency": "EUR"
+        },
+        "pricingOptions": {
+          "fareType": [
+            "PUBLISHED"
+          ],
+          "includedCheckedBagsOnly": true
+        },
+        "validatingAirlineCodes": [
+          "JL"
+        ],
+        "travelerPricings": [
+          {
+            "travelerId": "1",
+            "fareOption": "STANDARD",
+            "travelerType": "ADULT",
+            "price": {
+              "currency": "EUR",
+              "total": "1541.97",
+              "base": "465.00",
+              "taxes": [
+                {
+                  "amount": "6.99",
+                  "code": "XY"
+                },
+                {
+                  "amount": "14.13",
+                  "code": "P2"
+                },
+                {
+                  "amount": "21.79",
+                  "code": "SW"
+                },
+                {
+                  "amount": "17.16",
+                  "code": "IN"
+                },
+                {
+                  "amount": "882.42",
+                  "code": "YQ"
+                },
+                {
+                  "amount": "67.38",
+                  "code": "K3"
+                },
+                {
+                  "amount": "5.59",
+                  "code": "AY"
+                },
+                {
+                  "amount": "3.95",
+                  "code": "XA"
+                },
+                {
+                  "amount": "7.24",
+                  "code": "OI"
+                },
+                {
+                  "amount": "6.51",
+                  "code": "YC"
+                },
+                {
+                  "amount": "39.32",
+                  "code": "US"
+                },
+                {
+                  "amount": "4.49",
+                  "code": "XF"
+                }
+              ],
+              "refundableTaxes": "1076.97"
+            },
+            "fareDetailsBySegment": [
+              {
+                "segmentId": "39",
+                "cabin": "ECONOMY",
+                "fareBasis": "NNN0NO7E",
+                "class": "N",
+                "includedCheckedBags": {
+                  "quantity": 2
+                }
+              },
+              {
+                "segmentId": "40",
+                "cabin": "ECONOMY",
+                "fareBasis": "NNN0NO7E",
+                "class": "N",
+                "includedCheckedBags": {
+                  "quantity": 2
+                }
+              },
+              {
+                "segmentId": "78",
+                "cabin": "ECONOMY",
+                "fareBasis": "NNN0NO7E",
+                "class": "N",
+                "includedCheckedBags": {
+                  "quantity": 2
+                }
+              },
+              {
+                "segmentId": "79",
+                "cabin": "ECONOMY",
+                "fareBasis": "NNN0NO7E",
+                "class": "N",
+                "includedCheckedBags": {
+                  "quantity": 2
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "bookingRequirements": {
+      "emailAddressRequired": true,
+      "mobilePhoneNumberRequired": true,
+      "travelerRequirements": [
+        {
+          "travelerId": "1",
+          "genderRequired": true,
+          "documentRequired": true,
+          "dateOfBirthRequired": true,
+          "redressRequiredIfAny": true,
+          "residenceRequired": true
+        }
+      ]
+    }
+  }

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+*{  
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+}
+
+p {
+    text-align: center;
+}
+.head{
+    color: #ec1f92;
+    text-align: center;
+
+}
+.card-container {
+    display: grid;
+    justify-content: center;
+}
+
+.card-img {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    margin: 1rem;
+}
+
+.example-container {
+    display: grid;
+    align-items: center;
+}
+
+.card-body {
+    text-align: center;
+
+}
+
+.card-deck {
+    margin: 0 0 1rem 0;
+}

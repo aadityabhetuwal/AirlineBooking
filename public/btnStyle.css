@@ -1,0 +1,122 @@
+#guests-input-btn {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #d8d8d8;
+    border-radius: 2px;
+    text-overflow: ellipsis;
+    font-size: 17px;
+    -webkit-transition: border-color 0.2s ease;
+    transition: border-color 0.2s ease;
+    text-align: left;
+}
+
+.guests-input {
+    position: relative;
+    width: 300px;
+    /* padding-top: 20px; */
+}
+
+.guests-input button {
+    cursor: pointer;
+}
+
+.guests-input button:after,
+.guests-input button:before {
+    content: " ";
+    width: 10px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #484848;
+    position: absolute;
+    top: 19px
+}
+
+.guests-input button:before {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    right: 15px
+}
+
+.guests-input button:after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    right: 21px
+}
+
+.guests-input button.open:before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.guests-input button.open:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+.guests-input__options {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: rgba(72, 72, 72, 0.2) 0px 15px 20px;
+    box-shadow: rgba(72, 72, 72, 0.2) 0px 15px 20px;
+    border-radius: 2px;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear
+}
+
+.guests-input__options.open {
+    opacity: 1;
+    height: 100px;
+}
+
+.guests-input__options>div {
+    padding: 10px 0;
+    text-align: center
+}
+
+.guests-input__options>div:first-child {
+    padding-top: 35px
+}
+
+.guests-input__options>div:last-child {
+    padding-bottom: 35px
+}
+
+.guests-input__ctrl {
+    display: inline-block;
+    border: 1px solid #484848;
+    font-size: 20px;
+    color: #484848;
+    padding: 3px 8px;
+    line-height: 20px;
+    border-radius: 2px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease
+}
+
+.guests-input__ctrl.disabled {
+    color: #d8d8d8;
+    border-color: #d8d8d8;
+    cursor: default
+}
+
+.guests-input__value {
+    display: inline-block;
+    padding: 0 10px;
+    width: 100px;
+    cursor: default
+}
+
+.guests-input__value span {
+    display: inline-block;
+    padding-right: 5px
+}

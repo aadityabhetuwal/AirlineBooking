@@ -1,0 +1,51 @@
+{
+  "name": "vulnerable-nodejs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node ./bin/www",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "amadeus": "^7.0.0",
+    "body-parser": "^1.20.1",
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "csurf": "^1.11.0",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.3",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-session": "^1.17.3",
+    "http-errors": "~1.6.3",
+    "moment": "^2.29.4",
+    "morgan": "~1.9.1",
+    "mysql2": "^2.3.3",
+    "node-fetch": "^3.2.10",
+    "nodemon": "^2.0.20",
+    "request": "^2.88.2",
+    "uuidv4": "^6.2.13"
+  },
+  "description": "1. Donwload and install NodeJS  \r 1. After cloning the repository run  \r     `npm install`\r 1. Start running the WebServer by entering `npm run dev` in terminal.\r 1. Now, start the Machine Learning Model Server by using \r     `python manage.py runserver`",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aadityabhetuwal/Vulnerable.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "Spam",
+    "detector",
+    "XSRF",
+    "Injection"
+  ],
+  "author": "Aaditya Bhetuwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aadityabhetuwal/Vulnerable/issues"
+  },
+  "homepage": "https://github.com/aadityabhetuwal/Vulnerable#readme"
+}
