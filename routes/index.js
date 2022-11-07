@@ -16,7 +16,7 @@ router.get('/result', function(req, res, next) {
 
   console.log(impData[0]);
   
-  res.render('result', { impData });
+  res.render('result', { impData, import : true });
 });
 
 
