@@ -63,6 +63,7 @@ function prepareData(data) {
             arrivalTime: arrhour,
             price: x.price,
             numHops: x.itineraries[0].segments.length,
+            numberOfBookableSeats: x.numberOfBookableSeats,
         });
         i++;
 
