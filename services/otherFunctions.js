@@ -13,7 +13,16 @@ function generateRoute(segments) {
 function parseTotalDuration(duration) {
     if (duration == null || duration == undefined) return "";
 
+    if(duration.at(-1) != "M"){
+        duration += "0M";
+    }
+
     let y = duration.substring(2, duration.length - 1);
+
+    if(y.indexOf("H") == -1){
+        y = "0H" + y;
+    }
+
     y = y.replace("H", ":");
 
     let ind = y.indexOf(":");
@@ -27,7 +36,7 @@ function parseTotalDuration(duration) {
 
     if (min < 10) {
         min = `0${min}`;
-    }
+    } 
 
     return `${hr}:${min}`;
 }

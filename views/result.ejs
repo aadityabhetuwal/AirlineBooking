@@ -1,120 +1,131 @@
 <% if(locals.import) { %>
-  <% include ./imports.ejs %> 
-<% } %> 
+  <% include ./imports.ejs %>
+    <% } %>
 
-<style>
-  .bg-overlay1 {
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./images/bg.webp");
-    background-repeat: repeat;
-    background-size: cover;
-    background-position: center center;
-    color: #fff;
-    /* width: 100%; */
-    /* height: 640px; */
-  }
+      <style>
+        .bg-overlay1 {
+          background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./images/bg.webp");
+          background-repeat: repeat;
+          background-size: cover;
+          background-position: center center;
+          color: #fff;
+          /* width: 100%; */
+          /* height: 640px; */
+        }
 
-  .hrdisp {
-    font-size: 1.9em;
-    font-weight: 600;
-  }
+        .hrdisp {
+          font-size: 1.9em;
+          font-weight: 600;
+        }
 
-  .dur {
-    font-size: 1.3em;
-  }
+        .dur {
+          font-size: 1.3em;
+        }
 
-  .curr {
-    color: #cf3136;
-    font-size: 1.2em;
-    width: 40%;
-  }
+        .curr {
+          color: #cf3136;
+          font-size: 1.2em;
+          width: 40%;
+        }
 
-  .routedisp {
-    font-size: 1.2em;
-  }
+        .routedisp {
+          font-size: 1.2em;
+        }
 
-  .left{
-    color:rgba(81, 81, 81, 0.7);
-    
-  }
-</style>
+        .left {
+          color: rgba(81, 81, 81, 0.7);
+
+        }
+      </style>
 
 
-<div>
-  <!-- Image and text -->
+      <div>
+        <!-- Image and text -->
 
-  <% if(!locals.impData) { %>
-    <div>No result supplied</div>
-    <% }else{ %>
-
-      <section class="d-flex align-items-start justify-content-center p-2 pt-5 bg-overlay1">
-        <div class="d-flex align-items-center justify-content-center bg-white text-black 
-                rounded p-4 shadow-lg flex-column w-75" id="box">
-          <div class="header p-2">
-            <div class="display-5 text-secondary fw-bold">Flight Results</div>
-            <!-- <span class="text-muted"></span> -->
-          </div>
-
-          <ul class="list-group p-2 w-100">
-
-            <% for (x of impData){ %>
-              <li class="list-group-item m-2 rounded shadow-sm">
-                <div class="d-flex align-items-center justify-content-around">
-                  <table class="table p-2 text-center table-borderless">
-                    <tr class="fw-bold dur">
-                      <td>
-                        <%= x.source %>
-                      </td>
-                      <td>
-                        <%= x.duration %>
-                      </td>
-                      <td>
-                        <%= x.destination %>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="hrdisp">
-                        <%= x.departureTime %>
-                      </td>
-                      <td class="text-info routedisp">
-                        <%= x.route %>
-                      </td>
-                      <td class="hrdisp">
-                        <%= x.arrivalTime %>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <%= x.departureDate %>
-                      </td>
-                      <td></td>
-                      <td>
-                        <%= x.arrivalDate %>
-                      </td>
-                    </tr>
-                  </table>
-                  <div class="d-flex flex-column align-items-center ms-5 p-4 gap-2 curr">
-                    <div>
-                      <span>
-                        <%= x.price.currency %>
-                      </span>
-                      <span>
-                        <%= x.price.total %>
-                      </span>
-                    </div>
-
-                    <button class="btn btn-primary">View More</button>
-
-                    <div class="left fw-bold">
-                      <%= x.numberOfBookableSeats %> seats Left!!!
-                    </div>
+        <% if(!locals.impData) { %>
+          <div>No result supplied</div>
+          <% }else{ %>
+            <% if(impData.length==0) { %>
+              <section class="d-flex align-items-start justify-content-center p-2 pt-5 bg-overlay1">
+                <div class="d-flex align-items-center justify-content-center bg-white text-black 
+              rounded p-4 shadow-lg flex-column w-75" id="box">
+                  <div class="header p-2">
+                    <div class="display-5 text-secondary fw-bold">No records found</div>
+                    <!-- <span class="text-muted"></span> -->
                   </div>
-                </div>
-              </li>
+                </section>
+            <% } else { %>
 
-              <% } %>
-          </ul>
+                <section class="d-flex align-items-start justify-content-center p-2 pt-5 bg-overlay1">
+                  <div class="d-flex align-items-center justify-content-center bg-white text-black 
+                rounded p-4 shadow-lg flex-column w-75" id="box">
+                    <div class="header p-2">
+                      <div class="display-5 text-secondary fw-bold">Flight Results</div>
+                      <!-- <span class="text-muted"></span> -->
+                    </div>
 
-        </div>
-      </section>
-      <% } %>
-</div>
+                    <ul class="list-group p-2 w-100">
+
+                      <% for (x of impData){ %>
+                        <li class="list-group-item m-2 rounded shadow-sm">
+                          <div class="d-flex align-items-center justify-content-around">
+                            <table class="table p-2 text-center table-borderless">
+                              <tr class="fw-bold dur">
+                                <td>
+                                  <%= x.source %>
+                                </td>
+                                <td>
+                                  <%= x.duration %>
+                                </td>
+                                <td>
+                                  <%= x.destination %>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="hrdisp">
+                                  <%= x.departureTime %>
+                                </td>
+                                <td class="text-info routedisp">
+                                  <%= x.route %>
+                                </td>
+                                <td class="hrdisp">
+                                  <%= x.arrivalTime %>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <%= x.departureDate %>
+                                </td>
+                                <td></td>
+                                <td>
+                                  <%= x.arrivalDate %>
+                                </td>
+                              </tr>
+                            </table>
+                            <div class="d-flex flex-column align-items-center ms-5 p-4 gap-2 curr">
+                              <div>
+                                <span>
+                                  <%= x.price.currency %>
+                                </span>
+                                <span>
+                                  <%= x.price.total %>
+                                </span>
+                              </div>
+
+                              <button class="btn btn-primary">View More</button>
+
+                              <div class="left fw-bold">
+                                <%= x.numberOfBookableSeats %> seats Left!!!
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+
+                        <% } %>
+                    </ul>
+
+                  </div>
+                </section>
+                <% } %>
+                  <% } %>
+      </div>
