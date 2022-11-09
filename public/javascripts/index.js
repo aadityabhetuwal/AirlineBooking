@@ -134,10 +134,19 @@ async function verifyCode(val1, val2) {
     let code1 = vals1[0].trim();
     let code2 = vals2[0].trim();
 
+
     if (!code1 || code1.length != 3 || !code2 || code2.length != 3) {
         setMsgBox("Code has a length of 3 characters", "danger");
         return [false, false];
     }
+
+    // console.log(code1 == code2);
+
+    if(code1 == code2){
+        setMsgBox("The origin and destination cannot be the same", "danger");
+        return [-1, -1];
+    }
+
 
     const response = await fetch(`/api/verify-code/${code1}/${code2}`, {
         method: "GET",
@@ -167,6 +176,8 @@ async function collectAndValidateSingle() {
 
     if (!originLocationCode || !destinationLocationCode) {
         setMsgBox("Invalid code names", "danger");
+        return null;
+    }else if (originLocationCode == -1 && destinationLocationCode == -1) {
         return null;
     }
 

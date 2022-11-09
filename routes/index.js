@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const { parseDates, parseTotalDuration, generateRoute, prepareData } = require("../services/otherFunctions");
-const savedData = require("../public/result.json");
+const savedData = require("../public/result1.json");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

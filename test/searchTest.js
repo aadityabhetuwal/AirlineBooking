@@ -128,12 +128,9 @@ describe("GET /search", () => {
     for (x of tests) {
         it(x.title, (done) => {
             for (reqData of x.body) {
-                // console.log(reqData);
-
                 chai.request(server).post("/api/search").send(reqData)
                 .end((err, res) => {
                     res.should.have.status(400);
-                    console.log(res.status);
                 });
             }
             done();
